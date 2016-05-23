@@ -4,8 +4,6 @@ var server = new express();
 
 var http = require('http').Server(server);
 var io = require('socket.io')(http);
-var log = require('log');
-var debug = new log('debug'); 
 
 io.on('connection',function(socket) {
   socket.on('stream',function(image) {

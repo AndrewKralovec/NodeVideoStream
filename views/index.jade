@@ -1,7 +1,6 @@
 extends layout
 
 block content
-  script(src='/javascripts/socket.io.js')
   .heading
     h1= title
     p Welcome to #{title}
@@ -9,4 +8,5 @@ block content
     video(src='',id='video',width='680', height='320', controls='',autoplay='true')
     canvas(id='preview')
   .logger
-    script(src='/javascripts/camCtrl.js') 
+  script(src='/javascripts/socket.io.js')
+  script(src='/javascripts/camCtrl.js') 
