@@ -15,7 +15,7 @@ io.on('connection',function(socket) {
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Video Stream' });
 });
 
 module.exports = router;
