@@ -28,6 +28,7 @@ function viewVideo(videoes,context){
 }
 
 $(function() {
+  console.log("Start up");
   navigator.getUserMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia || 
                             navigator.mozGetUserMedia || navigator.msgGetUserMeida);
   if(navigator.getUserMedia){
