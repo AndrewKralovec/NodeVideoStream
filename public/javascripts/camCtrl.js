@@ -11,7 +11,7 @@ context.height = canvas.width ;
 context.height = canvas.height ; 
 
 var video = document.getElementById('video'); 
-var socket = io(); 
+//var socket = io(); 
 
 function logger(message){
   $('#logger').text(message); 
@@ -23,9 +23,9 @@ function loadCam(stream){
 function loadFail(){
   logger('Camera could not connect');
 }
-function viewVideo(videoes,context){
-  context.drawImage(video,offset,offset,context.width,context.height);
-  socket.emit('stream',canvas.toDataURL('image/webp')); 
+function viewVideo(video,context){
+  context.drawImage(video,0,0,context.width,context.height);
+  //socket.emit('stream',canvas.toDataURL('image/webp')); 
 }
 
 $(document).ready(function() {
@@ -36,5 +36,5 @@ $(document).ready(function() {
   }
   setInterval(function(){
     viewVideo(video,context);
-  },500);
+  },60);
 });
